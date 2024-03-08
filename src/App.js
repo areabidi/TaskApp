@@ -9,7 +9,7 @@ function App() {
     {id:1, text:"Meeting at School", day:"Feb 6th", reminder: true,},
     {id:2, text:"Food shopping", day:"Feb 5th", reminder: true,},
     {id:3, text:"Meeting at School", day:"Feb 5th", reminder: false,}
-])
+] )
 
 
 
