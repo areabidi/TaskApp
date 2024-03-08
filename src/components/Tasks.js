@@ -7,7 +7,7 @@ text:"Meeting at School", day:"Feb 6th", reminder: true,},
     text:"Food shopping", day:"Feb 5th", reminder: true,},
     {id:3,
         text:"Meeting at School", day:"Feb 5th", reminder: false,}]*/
-const Tasks = ({tasks}) => {
+const Tasks = ({tasks, onDelete, onToggle}) => {
 
    
 // <h3 key={tasks.id}>{tasks.text}</h3>
@@ -15,7 +15,7 @@ const Tasks = ({tasks}) => {
     return (
         <>
         {tasks.map((task)=> (
-                <Task key={task.id} task={task}/>
+                <Task key={task.id} task={task} onDelete={onDelete} onToggle ={onToggle} />
             ))}
         
         
