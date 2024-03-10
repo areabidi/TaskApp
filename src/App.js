@@ -27,7 +27,13 @@ const toggleReminder=(id) => {
 
 
 
-
+//addTask
+const addTask = (task) => {
+console.log(task);
+const id = Math.floor(Math.random()*10000)+1
+const newTask ={id, ...task}
+setTasks([...tasks, newTask])
+}
 
 
 
@@ -43,7 +49,7 @@ setTasks(tasks.filter((task) => task.id !== id))
       <div className="container">
          
           <Header title='Task Manager' />
-          <AddTask/>
+          <AddTask onAdd={addTask}/>
           { tasks.length > 0?(
             <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}
             />):('No Tasks To Show')
