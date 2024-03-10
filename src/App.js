@@ -2,6 +2,8 @@
 //import './App.css';
 import Header from './components/Header'
 import Tasks from './components/Tasks'
+import AddTask from './components/AddTask'
+
 import { useState } from 'react'
 
 function App() {
@@ -31,8 +33,7 @@ const toggleReminder=(id) => {
 
 //Detelet task 
 const deleteTask = (id) => {
-
-//console.log('delete', id)
+console.log('delete', id)
 setTasks(tasks.filter((task) => task.id !== id))
 
 }
@@ -42,6 +43,7 @@ setTasks(tasks.filter((task) => task.id !== id))
       <div className="container">
          
           <Header title='Task Manager' />
+          <AddTask/>
           { tasks.length > 0?(
             <Tasks tasks={tasks} onDelete={deleteTask} onToggle={toggleReminder}
             />):('No Tasks To Show')
